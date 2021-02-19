@@ -2,7 +2,7 @@
 
 const server = require('light-http-server');
 const path = require('path');
-var cors = require('cors')
+
 
 global.config = require('./resources/config');
 
@@ -18,8 +18,7 @@ global.functions = require('./resources/functions');
 /**
  * View engine setup
  */
-server.use(cors())
-server.options('*', cors())
+
 
 server.set('views', './views');
 server.set('view engine', 'pug');
